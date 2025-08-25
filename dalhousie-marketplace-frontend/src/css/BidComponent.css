@@ -1,0 +1,233 @@
+/* BidComponent.css */
+
+.bid-component {
+    background-color: #f9fafb;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 24px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+  }
+  
+  .dark .bid-component {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+  
+  .bid-component h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #111827;
+  }
+  
+  .dark .bid-component h3 {
+    color: #f9fafb;
+  }
+  
+  /* Form styles */
+  .bid-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .bid-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .bid-form-group label {
+    font-weight: 500;
+    color: #374151;
+  }
+  
+  .dark .bid-form-group label {
+    color: #e5e7eb;
+  }
+  
+  .bid-form-group input,
+  .bid-form-group textarea {
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  
+  .dark .bid-form-group input,
+  .dark .bid-form-group textarea {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: #f9fafb;
+  }
+  
+  .bid-form-group input:focus,
+  .bid-form-group textarea:focus {
+    outline: none;
+    border-color: #fbbf24;
+    box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.25);
+  }
+  
+  /* Submit button */
+  .submit-bid-button {
+    padding: 10px 16px;
+    background-color: #fbbf24;
+    color: #111827;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+    text-align: center;
+  }
+  
+  .submit-bid-button:hover {
+    background-color: #f59e0b;
+    transform: translateY(-1px);
+  }
+  
+  .submit-bid-button:disabled {
+    background-color: #d1d5db;
+    color: #6b7280;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .dark .submit-bid-button:disabled {
+    background-color: #4b5563;
+    color: #9ca3af;
+  }
+  
+  /* Bid info section */
+  .bid-info {
+    font-size: 14px;
+    color: #6b7280;
+    padding-top: 16px;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  .dark .bid-info {
+    color: #9ca3af;
+    border-top-color: #374151;
+  }
+  
+  /* Status messages */
+  .bid-error-message {
+    color: #ef4444;
+    background-color: rgba(239, 68, 68, 0.1);
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .dark .bid-error-message {
+    background-color: rgba(239, 68, 68, 0.2);
+  }
+  
+  .bid-success-message {
+    color: #10b981;
+    background-color: rgba(16, 185, 129, 0.1);
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .dark .bid-success-message {
+    background-color: rgba(16, 185, 129, 0.2);
+  }
+  
+  /* Bid status container */
+  .bid-status-container {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .dark .bid-status-container {
+    background-color: #374151;
+    border-color: #4b5563;
+  }
+  
+  .bid-status-container h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  
+  .bid-status-container p {
+    margin-bottom: 8px;
+  }
+  
+  /* Status specific styling */
+  .bid-status-pending {
+    border-left: 4px solid #f59e0b;
+  }
+  
+  .bid-status-accepted {
+    border-left: 4px solid #10b981;
+  }
+  
+  .bid-status-rejected {
+    border-left: 4px solid #ef4444;
+  }
+  
+  .bid-status-countered {
+    border-left: 4px solid #3b82f6;
+  }
+  
+  .bid-waiting-message {
+    color: #f59e0b;
+    font-style: italic;
+  }
+  
+  .bid-rejected-message {
+    color: #ef4444;
+  }
+  
+  .proceed-to-checkout-button {
+    display: block;
+    padding: 10px 16px;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 12px;
+    text-align: center;
+  }
+  
+  .proceed-to-checkout-button:hover {
+    background-color: #059669;
+    transform: translateY(-1px);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 640px) {
+    .bid-component {
+      padding: 16px;
+    }
+    
+    .bid-form-group input,
+    .bid-form-group textarea {
+      font-size: 16px; /* Better for mobile input */
+    }
+  }

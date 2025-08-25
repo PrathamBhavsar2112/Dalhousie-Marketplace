@@ -1,0 +1,43 @@
+/* BidIndicator.css */
+
+.bid-indicator {
+    background-color: #fffbeb;
+    border-left: 3px solid #f59e0b;
+    padding: 8px 12px;
+    margin-top: 12px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .dark .bid-indicator {
+    background-color: rgba(245, 158, 11, 0.1);
+    border-left-color: #f59e0b;
+  }
+  
+  .bid-indicator-label {
+    font-weight: 600;
+    color: #b45309;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .dark .bid-indicator-label {
+    color: #fbbf24;
+  }
+  
+  .bid-indicator-price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+    color: #92400e;
+    font-size: 13px;
+  }
+  
+  .dark .bid-indicator-price {
+    color: #fdba74;
+  }
+  
+  .starting-bid {
+    font-weight: 600;
+  }

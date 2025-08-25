@@ -1,0 +1,227 @@
+/* Light Mode Styles */
+.notification-settings {
+    background-color: white;
+    color: #111827;
+    padding: 32px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.notification-settings h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.notification-settings p {
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: #f3f4f6;
+    border-radius: 6px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.settings-item span {
+    font-size: 16px;
+}
+
+/* Dark Mode - Matching Cart Page Theme */
+.notification-settings.dark {
+    background-color: #1f2937; /* Same as Cart Page */
+    color: #f0f0f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.notification-settings.dark p {
+    color: #9ca3af; /* Lighter grey */
+}
+
+.notification-settings.dark .settings-item {
+    background-color: #2b2b2b;
+    border: 1px solid #374151; /* Subtle border */
+}
+
+.notification-settings.dark .settings-item span {
+    color: #f9fafb;
+}
+
+/* Toggle Button (Light & Dark Mode) */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #d1d5db;
+    border-radius: 34px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+/* Toggle Checked (ON) */
+.switch input:checked + .slider {
+    background-color: #fbbf24;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(18px);
+}
+
+/* Dark Mode Toggle */
+.notification-settings.dark .slider {
+    background-color: #374151;
+}
+
+.notification-settings.dark .switch input:checked + .slider {
+    background-color: #fbbf24;
+}
+
+.notification-settings.dark .slider:before {
+    background-color: #1f2937;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .notification-settings {
+        width: 90%;
+        padding: 24px;
+    }
+}
+
+.keyword-section {
+    margin-top: 30px;
+}
+
+.keyword-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.keyword-description {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 12px;
+}
+
+.keyword-input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.keyword-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: white;
+    color: #111827;
+}
+
+.keyword-add-btn {
+    padding: 8px 16px;
+    background-color: #fbbf24;
+    border: none;
+    border-radius: 4px;
+    color: #1f2937;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.keyword-add-btn:hover {
+    background-color: #f59e0b;
+}
+
+.keyword-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.keyword-chip {
+    background-color: #f3f4f6;
+    color: #111827;
+    padding: 6px 12px;
+    border-radius: 9999px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: #ef4444;
+    font-size: 16px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+/* Dark Mode */
+.notification-settings.dark .keyword-input {
+    background-color: #374151;
+    color: #f9fafb;
+    border: 1px solid #4b5563;
+}
+
+.notification-settings.dark .keyword-add-btn {
+    background-color: #fbbf24;
+    color: #1f2937;
+}
+
+.notification-settings.dark .keyword-chip {
+    background-color: #2b2b2b;
+    color: #f9fafb;
+}
+
+.notification-settings.dark .remove-btn {
+    color: #f87171;
+}
+
+.notification-settings.dark .keyword-description {
+    color: #9ca3af;
+}

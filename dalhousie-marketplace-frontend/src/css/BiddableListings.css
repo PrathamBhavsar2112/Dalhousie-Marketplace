@@ -1,0 +1,588 @@
+/* BiddableListings.css with dalbl- prefix for unique class names */
+
+/* Base Container */
+.dalbl-container {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .dalbl-container.dalbl-dark {
+    color: white;
+  }
+  
+  /* Header Section */
+  .dalbl-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .dalbl-main-title {
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    color: #111827;
+  }
+  
+  .dalbl-dark .dalbl-main-title {
+    color: white;
+  }
+  
+  .dalbl-main-icon {
+    color: #fbbf24;
+  }
+  
+  .dalbl-search-container {
+    position: relative;
+    width: 300px;
+  }
+  
+  .dalbl-search-input {
+    width: 100%;
+    padding: 10px 16px 10px 40px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .dalbl-search-input:focus {
+    outline: none;
+    border-color: #fbbf24;
+    box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.2);
+  }
+  
+  .dalbl-dark .dalbl-search-input {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: white;
+  }
+  
+  .dalbl-dark .dalbl-search-input::placeholder {
+    color: #9ca3af;
+  }
+  
+  .dalbl-search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* Filters Bar */
+  .dalbl-filters-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .dalbl-dark .dalbl-filters-bar {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+  
+  .dalbl-filter-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .dalbl-filter-toggle:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .dalbl-dark .dalbl-filter-toggle {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: white;
+  }
+  
+  .dalbl-dark .dalbl-filter-toggle:hover {
+    background-color: #4b5563;
+  }
+  
+  .dalbl-result-count {
+    font-size: 14px;
+    color: #6b7280;
+  }
+  
+  .dalbl-dark .dalbl-result-count {
+    color: #9ca3af;
+  }
+  
+  /* Sort Control */
+  .dalbl-sort-control {
+    position: relative;
+  }
+  
+  .dalbl-sort-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .dalbl-sort-button:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .dalbl-dark .dalbl-sort-button {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: white;
+  }
+  
+  .dalbl-dark .dalbl-sort-button:hover {
+    background-color: #4b5563;
+  }
+  
+  .dalbl-sort-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    width: 240px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    z-index: 10;
+  }
+  
+  .dalbl-dark .dalbl-sort-dropdown {
+    background-color: #1f2937;
+    border-color: #374151;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.18);
+  }
+  
+  .dalbl-sort-option {
+    width: 100%;
+    text-align: left;
+    padding: 8px 12px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #e5e7eb;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 14px;
+    color: #374151;
+  }
+  
+  .dalbl-sort-option:last-child {
+    border-bottom: none;
+  }
+  
+  .dalbl-sort-option:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .dalbl-sort-option.dalbl-active {
+    background-color: #fef3c7;
+    color: #d97706;
+    font-weight: 500;
+  }
+  
+  .dalbl-dark .dalbl-sort-option {
+    border-color: #374151;
+    color: #e5e7eb;
+  }
+  
+  .dalbl-dark .dalbl-sort-option:hover {
+    background-color: #374151;
+  }
+  
+  .dalbl-dark .dalbl-sort-option.dalbl-active {
+    background-color: rgba(217, 119, 6, 0.2);
+    color: #fbbf24;
+  }
+  
+  /* Filter Panel */
+  .dalbl-filter-panel {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    align-items: end;
+  }
+  
+  .dalbl-dark .dalbl-filter-panel {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+  
+  .dalbl-price-filter h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: #111827;
+  }
+  
+  .dalbl-dark .dalbl-price-filter h3 {
+    color: white;
+  }
+  
+  .dalbl-range-inputs {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .dalbl-range-input {
+    flex: 1;
+  }
+  
+  .dalbl-range-input label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #4b5563;
+  }
+  
+  .dalbl-dark .dalbl-range-input label {
+    color: #9ca3af;
+  }
+  
+  .dalbl-range-input input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .dalbl-dark .dalbl-range-input input {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: white;
+  }
+  
+  .dalbl-reset-filters {
+    padding: 8px 16px;
+    background-color: #f3f4f6;
+    color: #4b5563;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    height: fit-content;
+  }
+  
+  .dalbl-reset-filters:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .dalbl-dark .dalbl-reset-filters {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: #9ca3af;
+  }
+  
+  .dalbl-dark .dalbl-reset-filters:hover {
+    background-color: #4b5563;
+  }
+  
+  /* Grid Layout */
+  .dalbl-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  
+  /* Card Component */
+  .dalbl-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .dalbl-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .dalbl-dark .dalbl-card {
+    background-color: #1f2937;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .dalbl-dark .dalbl-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.45);
+  }
+  
+  .dalbl-card-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: #10b981;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 5;
+  }
+  
+  .dalbl-image-container {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    background-color: #f3f4f6;
+  }
+  
+  .dalbl-dark .dalbl-image-container {
+    background-color: #374151;
+  }
+  
+  .dalbl-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .dalbl-bid-count {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 12px;
+  }
+  
+  .dalbl-content {
+    padding: 16px;
+  }
+  
+  .dalbl-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: #111827;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .dalbl-dark .dalbl-title {
+    color: white;
+  }
+  
+  .dalbl-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .dalbl-price {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fbbf24;
+  }
+  
+  .dalbl-time-left {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: #6b7280;
+  }
+  
+  .dalbl-dark .dalbl-time-left {
+    color: #9ca3af;
+  }
+  
+  .dalbl-seller {
+    font-size: 14px;
+    color: #4b5563;
+    margin: 0 0 16px 0;
+  }
+  
+  .dalbl-dark .dalbl-seller {
+    color: #9ca3af;
+  }
+  
+  .dalbl-footer {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .dalbl-bid-button {
+    flex: 1;
+    padding: 8px 12px;
+    background-color: #fbbf24;
+    color: #111827;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+  }
+  
+  .dalbl-bid-button:hover {
+    background-color: #f59e0b;
+  }
+  
+  .dalbl-view-button {
+    padding: 8px 12px;
+    background-color: #f3f4f6;
+    color: #4b5563;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .dalbl-view-button:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .dalbl-dark .dalbl-view-button {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: #9ca3af;
+  }
+  
+  .dalbl-dark .dalbl-view-button:hover {
+    background-color: #4b5563;
+  }
+  
+  /* Empty State */
+  .dalbl-no-results {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .dalbl-dark .dalbl-no-results {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+  
+  .dalbl-no-results p {
+    margin: 0 0 16px 0;
+    color: #6b7280;
+  }
+  
+  .dalbl-dark .dalbl-no-results p {
+    color: #9ca3af;
+  }
+  
+  .dalbl-back-button {
+    padding: 8px 16px;
+    background-color: #fbbf24;
+    color: #111827;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .dalbl-back-button:hover {
+    background-color: #f59e0b;
+  }
+  
+  /* Loading and Error States */
+  .dalbl-loading,
+  .dalbl-error {
+    padding: 60px 20px;
+    text-align: center;
+    color: #6b7280;
+  }
+  
+  .dalbl-dark .dalbl-loading,
+  .dalbl-dark .dalbl-error {
+    color: #9ca3af;
+  }
+  
+  .dalbl-error {
+    color: #ef4444;
+  }
+  
+  .dalbl-dark .dalbl-error {
+    color: #f87171;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .dalbl-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .dalbl-search-container {
+      width: 100%;
+    }
+    
+    .dalbl-filters-bar {
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    
+    .dalbl-filter-panel {
+      grid-template-columns: 1fr;
+    }
+    
+    .dalbl-range-inputs {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .dalbl-container {
+      padding: 16px;
+    }
+    
+    .dalbl-grid {
+      grid-template-columns: 1fr;
+    }
+  }

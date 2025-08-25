@@ -1,0 +1,227 @@
+/* PaymentRedirect.css */
+
+.payment-redirect-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  .payment-redirect-card {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 56px;
+    cursor: pointer;
+  }
+  
+  /* Status icons */
+  .status-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .status-icon.success {
+    background-color: #10b981;
+  }
+  
+  .status-icon.cancelled {
+    background-color: #ef4444;
+  }
+  
+  .status-icon.error {
+    background-color: #f59e0b;
+  }
+  
+  /* Typography */
+  .payment-redirect-card h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 16px;
+  }
+  
+  .payment-redirect-card p {
+    color: #6b7280;
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Order summary */
+  .order-summary {
+    background-color: #f9fafb;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+  
+  .order-summary h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 8px;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  .summary-row span:first-child {
+    color: #6b7280;
+  }
+  
+  .summary-row span:last-child {
+    font-weight: 500;
+    color: #111827;
+  }
+  
+  /* Confirmation message */
+  .confirmation-message {
+    margin-bottom: 24px;
+    padding: 12px;
+    background-color: #ecfdf5;
+    border-radius: 8px;
+  }
+  
+  .confirmation-message p {
+    margin: 0;
+    color: #047857;
+  }
+  
+  /* Cancelled info */
+  .cancelled-info {
+    margin-bottom: 24px;
+    padding: 12px;
+    background-color: #fff1f2;
+    border-radius: 8px;
+  }
+  
+  .cancelled-info p {
+    margin: 0;
+    color: #be123c;
+  }
+  
+  /* Action buttons */
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .action-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    font-size: 14px;
+  }
+  
+  .primary-button {
+    background-color: #fbbf24;
+    color: #111827;
+  }
+  
+  .secondary-button {
+    background-color: #f3f4f6;
+    color: #4b5563;
+  }
+  
+  .retry-button {
+    background-color: #60a5fa;
+    color: white;
+  }
+  
+  .primary-button:hover {
+    background-color: #f59e0b;
+    transform: translateY(-1px);
+  }
+  
+  .secondary-button:hover {
+    background-color: #e5e7eb;
+    transform: translateY(-1px);
+  }
+  
+  .retry-button:hover {
+    background-color: #3b82f6;
+    transform: translateY(-1px);
+  }
+  
+  .button-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* Loading spinner */
+  .loading-spinner {
+    border: 4px solid #f3f4f6;
+    border-top: 4px solid #fbbf24;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 24px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 480px) {
+    .payment-redirect-card {
+      padding: 24px 16px;
+    }
+    
+    .action-buttons {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .action-buttons button {
+      width: 100%;
+    }
+    
+    .summary-row {
+      font-size: 13px;
+    }
+  }

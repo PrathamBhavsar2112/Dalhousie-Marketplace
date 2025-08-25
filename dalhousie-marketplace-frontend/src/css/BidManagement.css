@@ -1,0 +1,366 @@
+/* BidManagement.css */
+
+.bid-management {
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    margin-top: 28px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .dark .bid-management {
+    background-color: #1f2937;
+    border-color: #374151;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Header section */
+  .bid-management-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .bid-management h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    color: #111827;
+  }
+  
+  .dark .bid-management h3 {
+    color: #f9fafb;
+  }
+  
+  .bid-management-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Finalize button */
+  .finalize-bidding-button {
+    padding: 10px 16px;
+    background-color: #fbbf24;
+    color: #111827;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .finalize-bidding-button:hover {
+    background-color: #f59e0b;
+    transform: translateY(-1px);
+  }
+  
+  .finalize-bidding-button:disabled {
+    background-color: #d1d5db;
+    color: #6b7280;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .dark .finalize-bidding-button:disabled {
+    background-color: #4b5563;
+    color: #9ca3af;
+  }
+  
+  /* Filter controls */
+  .bid-filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .bid-filter label {
+    font-size: 14px;
+    color: #4b5563;
+  }
+  
+  .dark .bid-filter label {
+    color: #d1d5db;
+  }
+  
+  .bid-filter select {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background-color: white;
+    color: #111827;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .dark .bid-filter select {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: #f9fafb;
+  }
+  
+  /* Table styles */
+  .bids-table-container {
+    overflow-x: auto;
+    margin-bottom: 16px;
+  }
+  
+  .bids-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  
+  .bids-table th,
+  .bids-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .dark .bids-table th,
+  .dark .bids-table td {
+    border-bottom-color: #374151;
+  }
+  
+  .bids-table th {
+    font-weight: 600;
+    color: #6b7280;
+    background-color: #f9fafb;
+  }
+  
+  .dark .bids-table th {
+    color: #d1d5db;
+    background-color: #111827;
+  }
+  
+  .bids-table tbody tr:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .dark .bids-table tbody tr:hover {
+    background-color: #242b36;
+  }
+  
+  /* Make columns sortable */
+  .sortable {
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    white-space: nowrap;
+  }
+  
+  .sortable:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .dark .sortable:hover {
+    background-color: #242b36;
+  }
+  
+  /* Status styling */
+  .status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 8px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  .status-column {
+    min-width: 120px;
+  }
+  
+  .status-pending {
+    background-color: #fef3c7;
+    color: #b45309;
+  }
+  
+  .status-accepted {
+    background-color: #d1fae5;
+    color: #065f46;
+  }
+  
+  .status-rejected {
+    background-color: #fee2e2;
+    color: #b91c1c;
+  }
+  
+  .dark .status-pending {
+    background-color: rgba(251, 191, 36, 0.2);
+    color: #fbbf24;
+  }
+  
+  .dark .status-accepted {
+    background-color: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+  }
+  
+  .dark .status-rejected {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+  }
+  
+  /* Inline action buttons */
+  .inline-actions {
+    display: flex;
+    gap: 4px;
+    margin-left: 8px;
+  }
+  
+  /* Table row styling based on status */
+  tr.status-accepted {
+    background-color: rgba(209, 250, 229, 0.2);
+  }
+  
+  tr.status-rejected {
+    background-color: rgba(254, 226, 226, 0.1);
+  }
+  
+  .dark tr.status-accepted {
+    background-color: rgba(16, 185, 129, 0.05);
+  }
+  
+  .dark tr.status-rejected {
+    background-color: rgba(239, 68, 68, 0.05);
+  }
+  
+  /* Cell-specific styling */
+  .price-cell {
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  
+  .terms-cell {
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* Action buttons */
+  .accept-bid-button,
+  .reject-bid-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .accept-bid-button {
+    background-color: #d1fae5;
+    color: #065f46;
+  }
+  
+  .accept-bid-button:hover {
+    background-color: #a7f3d0;
+  }
+  
+  .reject-bid-button {
+    background-color: #fee2e2;
+    color: #b91c1c;
+  }
+  
+  .reject-bid-button:hover {
+    background-color: #fecaca;
+  }
+  
+  .dark .accept-bid-button {
+    background-color: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+  }
+  
+  .dark .accept-bid-button:hover {
+    background-color: rgba(16, 185, 129, 0.3);
+  }
+  
+  .dark .reject-bid-button {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+  }
+  
+  .dark .reject-bid-button:hover {
+    background-color: rgba(239, 68, 68, 0.3);
+  }
+  
+  /* No bids message */
+  .no-bids-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    color: #6b7280;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    border: 1px dashed #d1d5db;
+  }
+  
+  .dark .no-bids-message {
+    color: #9ca3af;
+    background-color: #111827;
+    border-color: #374151;
+  }
+  
+  .no-bids-message p {
+    margin-top: 12px;
+  }
+  
+  /* Loading and error states */
+  .bid-management-loading,
+  .bid-management-error {
+    padding: 20px;
+    text-align: center;
+    color: #6b7280;
+  }
+  
+  .dark .bid-management-loading,
+  .dark .bid-management-error {
+    color: #9ca3af;
+  }
+  
+  .bid-management-error {
+    color: #ef4444;
+  }
+  
+  .dark .bid-management-error {
+    color: #f87171;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .bid-management-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .bid-management-actions {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .bids-table th,
+    .bids-table td {
+      padding: 8px 10px;
+    }
+    
+    .terms-cell {
+      max-width: 100px;
+    }
+  }

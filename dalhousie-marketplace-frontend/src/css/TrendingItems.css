@@ -1,0 +1,119 @@
+.trending-items {
+    margin-top: 30px;
+  }
+  
+  .trending-items h3 {
+    margin-bottom: 15px;
+  }
+  
+  .items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .item-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+  
+  .item-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .item-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  
+  .item-card h4 {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .item-card p {
+    font-weight: bold;
+    color: green;
+  }
+  
+  .bid-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  
+  .bid-btn:hover {
+    background-color: #218838;
+  }
+  
+  .bid-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bid-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+  }
+  
+  .modal-img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .modal-actions {
+    margin-top: 15px;
+  }
+  
+  .modal-actions button {
+    margin: 5px;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  
+  .modal-actions button:first-child {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .modal-actions button:first-child:hover {
+    background-color: #0056b3;
+  }
+  
+  .cancel-btn {
+    background-color: red;
+    color: white;
+  }
+  
+  .cancel-btn:hover {
+    background-color: darkred;
+  }
+  

@@ -1,0 +1,33 @@
+.announcements {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.announcements h3 {
+  margin-bottom: 10px;
+}
+
+.announcement-message {
+  font-size: 16px;
+  font-weight: bold;
+  color: yellow;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.announcement-message:hover {
+  color: orange;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

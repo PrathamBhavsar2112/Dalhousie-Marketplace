@@ -1,0 +1,286 @@
+/* BidForm.css - Using dalbid- prefix for unique class names */
+
+.dalbid-form-container {
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .dalbid-dark.dalbid-form-container {
+    background-color: #1f2937;
+    color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .dalbid-form-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    color: #111827;
+  }
+  
+  .dalbid-dark .dalbid-form-title {
+    color: white;
+  }
+  
+  .dalbid-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .dalbid-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .dalbid-form-group label {
+    font-weight: 500;
+    color: #374151;
+  }
+  
+  .dalbid-dark .dalbid-form-group label {
+    color: #e5e7eb;
+  }
+  
+  .dalbid-input-container {
+    position: relative;
+  }
+  
+  .dalbid-input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .dalbid-dark .dalbid-input-icon {
+    color: #d1d5db;
+  }
+  
+  .dalbid-input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .dalbid-input:focus {
+    border-color: #fbbf24;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.2);
+  }
+  
+  .dalbid-dark .dalbid-input {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: white;
+  }
+  
+  .dalbid-dark .dalbid-input:focus {
+    border-color: #fbbf24;
+    box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.2);
+  }
+  
+  .dalbid-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 16px;
+    min-height: 120px;
+    resize: vertical;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .dalbid-textarea:focus {
+    border-color: #fbbf24;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.2);
+  }
+  
+  .dalbid-dark .dalbid-textarea {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: white;
+  }
+  
+  .dalbid-dark .dalbid-textarea:focus {
+    border-color: #fbbf24;
+    box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.2);
+  }
+  
+  .dalbid-char-count {
+    font-size: 12px;
+    color: #6b7280;
+    text-align: right;
+  }
+  
+  .dalbid-dark .dalbid-char-count {
+    color: #9ca3af;
+  }
+  
+  .dalbid-error-message {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #dc2626;
+    font-size: 14px;
+    background-color: #fef2f2;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 8px;
+  }
+  
+  .dalbid-dark .dalbid-error-message {
+    background-color: rgba(220, 38, 38, 0.2);
+  }
+  
+  .dalbid-success-message {
+    color: #059669;
+    font-size: 14px;
+    background-color: #ecfdf5;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 8px;
+  }
+  
+  .dalbid-dark .dalbid-success-message {
+    background-color: rgba(5, 150, 105, 0.2);
+  }
+  
+  .dalbid-submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    background-color: #fbbf24;
+    color: #111827;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+  }
+  
+  .dalbid-submit-button:hover {
+    background-color: #f59e0b;
+    transform: translateY(-1px);
+  }
+  
+  .dalbid-submit-button:disabled {
+    background-color: #d1d5db;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .dalbid-dark .dalbid-submit-button:disabled {
+    background-color: #4b5563;
+    color: #9ca3af;
+  }
+  
+  .dalbid-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid #111827;
+    border-radius: 50%;
+    animation: dalbid-spin 1s linear infinite;
+    margin-right: 8px;
+  }
+  
+  @keyframes dalbid-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .dalbid-bid-info {
+    margin-top: 24px;
+    background-color: #f9fafb;
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  .dalbid-dark .dalbid-bid-info {
+    background-color: #374151;
+  }
+  
+  .dalbid-bid-info p {
+    margin: 0 0 8px 0;
+    color: #4b5563;
+  }
+  
+  .dalbid-dark .dalbid-bid-info p {
+    color: #d1d5db;
+  }
+  
+  .dalbid-bid-info p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .dalbid-bid-info strong {
+    color: #111827;
+  }
+  
+  .dalbid-dark .dalbid-bid-info strong {
+    color: white;
+  }
+  
+  .dalbid-info-note {
+    font-style: italic;
+    font-size: 14px;
+  }
+  
+  .dalbid-rules {
+    margin-top: 24px;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 16px;
+  }
+  
+  .dalbid-dark .dalbid-rules {
+    border-top-color: #4b5563;
+  }
+  
+  .dalbid-rules h4 {
+    font-size: 16px;
+    margin: 0 0 12px 0;
+    color: #111827;
+  }
+  
+  .dalbid-dark .dalbid-rules h4 {
+    color: white;
+  }
+  
+  .dalbid-rules ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+  }
+  
+  .dalbid-rules li {
+    color: #6b7280;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  .dalbid-dark .dalbid-rules li {
+    color: #9ca3af;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .dalbid-form-container {
+      padding: 16px;
+    }
+  }

@@ -1,0 +1,215 @@
+.App {
+  background-image: url("../assets/Dalhouise_bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.welcome-header {
+  color: #0f0f0d;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.addUser {
+  width: 25%;
+  margin: 50px auto;
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
+}
+
+.addUserForm .inputGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.addUserForm .inputGroup label {
+  margin-top: 10px;
+}
+
+.addUserForm .inputGroup input {
+  margin-top: 5px;
+  padding: 8px;
+}
+
+.inputGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  margin-top: 10px;
+}
+
+.inputGroup input {
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.inputGroup button {
+  margin-top: 10px;
+}
+
+.signup-link {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.signup-link .btn.btn-primary {
+  width: 50%;
+}
+
+.addUser h3 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.login-error-message {
+  color: red;
+  font-size: 13px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  line-height: 1.2;
+  word-wrap: break-word;
+  max-height: 40px;
+  overflow: hidden;
+}
+
+
+.forgot-password-link {
+  color: #007bff;
+  text-decoration: underline;
+  font-size: 14px;
+  text-align: right;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.forgot-password-link:hover {
+  text-decoration: none;
+}
+
+.forgot-password-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+}
+
+.popup-content h4 {
+  margin-bottom: 10px;
+}
+
+.popup-content input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.popup-content .btn-primary {
+  margin-top: 10px;
+}
+
+.reset-message {
+  margin-top: 10px;
+  color: green;
+}
+
+.close-btn {
+  background: red;
+  color: white;
+}
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.popup-buttons button {
+  flex: 1;
+  padding: 8px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.send-reset-btn {
+  background-color: #007bff;
+  color: white;
+}
+.login-password-container {
+  position: relative;
+  width: 100%;
+}
+
+.login-password-container input {
+  flex: 1;
+  padding-right: 50px;
+  width: 100%;
+  border: 1px solid #ccc; 
+  border-radius: 4px;
+  transition: border-color 0.3s;
+  
+}
+
+.login-password-toggle-btn {
+  background: none;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  font-size: 16px;
+  right: 10px;
+  top: -6px;
+}
+
+.login-password-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.login-password-icon:hover {
+  color: #555;
+}
+
+.login-password-icon.hide {
+  display: none;
+}
+.login-password-container .login-password-icon {
+  z-index: 1; 
+}
+.login-password-container input:focus {
+  border-color: #ccc; 
+  outline: none;     
+  box-shadow: none;  
+}
